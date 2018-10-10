@@ -1,0 +1,24 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Django News</h1>
+            <p>Have a look around to see some of the latest and greatest news articles from your favorite feeds.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        {% for article in object_list %}
+            <p>{{ article.title }}</p>
+            <p>{{ article.url }}</p>
+            <p>{{ article.publication_date }}</p>
+            <p>{{ article.trend }}</p>
+        {% endfor %}
+    {% if not object_list %}
+        <p>There is not articles yet)</p>
+    {% endif %}
+    </div>
+
+{% endblock %}

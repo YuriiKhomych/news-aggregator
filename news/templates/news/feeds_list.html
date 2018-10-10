@@ -1,0 +1,24 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>News Feeds</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="{% url 'news:feeds-create' %}" class="btn btn-primary">New Feed</a>
+        <hr>
+        <ul>
+            {% for feed in object_list %}
+                <p>{{ feed.url }}</p>
+                <p>{{ feed.title }}</p>
+                <p>{{ feed.active }}</p>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+{% endblock %}
