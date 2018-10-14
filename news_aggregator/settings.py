@@ -186,7 +186,7 @@ CELERY_BROKER_URL = 'redis://redis:6379'
 CELERY_BEAT_SCHEDULE = {
     'update-all-feed-articles': {
         'task': 'news.tasks.update_all_feed_articles_task',
-        'schedule': crontab(minute=15),
+        'schedule': crontab(minute='*/10'),
     }
 }
 
