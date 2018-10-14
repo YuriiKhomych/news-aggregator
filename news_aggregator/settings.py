@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+from datetime import timedelta
+from celery.schedules import crontab
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -118,6 +121,20 @@ USE_L10N = True
 
 USE_TZ = True
 
+# CELERY STUFF
+BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Europe/Kiev'
+CELERY_BEAT_SCHEDULE = {
+    'update-all-feed-articles': {
+        'task': 'news.tasks.update_all_feed_articles_task',
+        'schedule': timedelta(minutes=2),
+        #     crontab(minute=0, hour='*/3')
+    }
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
