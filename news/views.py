@@ -14,6 +14,11 @@ class ArticleListView(ListView):
     queryset = Article.objects.all()
 
 
+class ArticleTrendListView(ListView):
+    template_name = 'news/articles_trend_list.html'
+    queryset = Article.objects.exclude(trend__isnull=True).exclude(trend__exact='')
+
+
 class FeedListView(ListView):
     template_name = 'news/feeds_list.html'
     queryset = Feed.objects.all()
