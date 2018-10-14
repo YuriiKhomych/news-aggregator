@@ -11,10 +11,15 @@
 
     <div class="container">
         {% for article in object_list %}
-            <p>{{ article.title }}</p>
-            <p>{{ article.url }}</p>
-            <p>{{ article.publication_date }}</p>
-            <p>{{ article.trend }}</p>
+            <p><b>Title:</b> {{ article.title }}</p>
+            <p><b>URL:</b> {{ article.url }}</p>
+            <p><b>Publication date:</b>
+                {% if article.publication_date %}
+                    {{ article.publication_date }}
+                {% else %}
+                    Publication date not set on article
+                {% endif %}
+            </p>
             <hr>
 
         {% endfor %}
