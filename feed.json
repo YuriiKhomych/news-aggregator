@@ -1,5 +1,14 @@
 [
   {"model": "news.feed", "pk": 1, "fields": {"title": "CNN.com - Technology", "url": "http://rss.cnn.com/rss/edition_technology.rss"}},
   {"model": "news.feed", "pk": 2, "fields": {"title": "CNN.com - RSS Channel - Regions - Africa", "url": "http://rss.cnn.com/rss/edition_africa.rss"}},
-  {"model": "news.feed", "pk": 3, "fields": {"title": "CNN.com - RSS Channel - Regions - Europe", "url": "http://rss.cnn.com/rss/edition_europe.rss"}}
+  {"model": "news.feed", "pk": 3, "fields": {"title": "CNN.com - RSS Channel - Regions - Europe", "url": "http://rss.cnn.com/rss/edition_europe.rss"}},
+  {"model": "news.feed", "pk": 4, "fields": {"title": "CNN.com - RSS Channel - Regions - Top Stories", "url": "http://rss.cnn.com/rss/edition.rss"}},
+  {"model": "news.feed", "pk": 5, "fields": {"title": "CNN.com - RSS Channel - Regions - World", "url": "http://rss.cnn.com/rss/edition_world.rss"}},
+  {"model": "news.feed", "pk": 6, "fields": {"title": "CNN.com - RSS Channel - Regions - Americas", "url": "http://rss.cnn.com/rss/edition_americas.rss"}},
+  {"model": "news.feed", "pk": 7, "fields": {"title": "CNN.com - RSS Channel - Regions - Asia", "url": "http://rss.cnn.com/rss/edition_asia.rss"}},
+  {"model": "news.feed", "pk": 8, "fields": {"title": "CNN.com - RSS Channel - Regions - Middle East", "url": "http://rss.cnn.com/rss/edition_meast.rss"}},
+  {"model": "news.feed", "pk": 9, "fields": {"title": "CNN.com - RSS Channel - Regions - U.S.", "url": "http://rss.cnn.com/rss/edition_us.rss"}},
+  {"model": "news.feed", "pk": 10, "fields": {"title": "CNN.com - RSS Channel - Regions - Money", "url": "http://rss.cnn.com/rss/money_news_international.rss"}},
+  {"model": "news.feed", "pk": 11, "fields": {"title": "CNN.com - RSS Channel - Regions - Science & Space", "url": "http://rss.cnn.com/rss/edition_space.rss"}},
+  {"model": "news.feed", "pk": 12, "fields": {"title": "CNN.com - RSS Channel - Regions - Entertainment", "url": "http://rss.cnn.com/rss/edition_entertainment.rss"}}
 ]
