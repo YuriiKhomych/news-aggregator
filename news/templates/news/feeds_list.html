@@ -13,9 +13,9 @@
         <hr>
         <ul>
             {% for feed in object_list %}
-                <p>{{ feed.url }}</p>
-                <p>{{ feed.title }}</p>
-                <p>{{ feed.active }}</p>
+                <p><b>Feed url:</b> {{ feed.url }}</p>
+                <p><b>Feed title:</b> {{ feed.title }}</p>
+                <hr>
             {% endfor %}
         </ul>
 
