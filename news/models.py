@@ -54,7 +54,7 @@ class Article(models.Model):
     feed = models.ForeignKey(Feed, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     url = models.URLField()
-    publication_date = models.DateTimeField()
+    publication_date = models.DateTimeField(null=True, blank=True)
     trend = models.CharField(max_length=200)
 
     def __str__(self):
