@@ -36,11 +36,14 @@ class Feed(models.Model):
             except:
                 article = Article()
             article_trend_title = re.sub('[^A-Za-z0-9]+', ' ', entry.title.lower())
-            pytrend = TrendReq()
-            pytrend.build_payload(kw_list=[article_trend_title])
-            interest_over_time_df = pytrend.interest_over_time()
-            if not interest_over_time_df.empty:
-                article.trend = article_trend_title
+            article_trend_title = article_trend_title[:90] \
+                if len(article_trend_title) > 90 else article_trend_title
+            if article_trend_title:
+                pytrend = TrendReq()
+                pytrend.build_payload(kw_list=[article_trend_title])
+                interest_over_time_df = pytrend.interest_over_time()
+                if not interest_over_time_df.empty:
+                    article.trend = article_trend_title
             article.title = entry.title
             article.url = entry.link
             published = entry.get('published')
