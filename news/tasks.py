@@ -13,5 +13,6 @@ def update_all_feed_articles_task():
     """ Updates articles for all RSS/Atom feeds """
     feeds = Feed.objects.all()
     for feed in feeds:
-        logger.info("Retrieving Articles for " + feed.title)
+        logger.info(f"Retrieving Articles for {feed.title}")
         feed.get_feed_articles()
+    logger.info(f"Finished Retrieving Articles for {feed.title}")
